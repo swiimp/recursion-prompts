@@ -275,14 +275,18 @@
         expect(sumBelow(7)).to.equal(21);
         expect(sumBelow(12)).to.equal(66);
       });
-
+      
+      /* Is this supposed to be here?
+      
       it('should return the sum of an array of negative integers', function() {
         expect(sumBelow(-1)).to.equal(0);
         expect(sumBelow(-2)).to.equal(-1);
         expect(sumBelow(-6)).to.equal(-15);
         expect(sumBelow(-11)).to.equal(-55);
       });
-
+      
+      */
+      
       it('should use recursion by calling self', function() {
         sumBelow(5);
         expect(sumBelow.callCount).to.be.above(1);
