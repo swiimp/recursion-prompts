@@ -45,12 +45,30 @@ var arraySum = function(array) {
 
 // 4. Check if a number is even.
 var isEven = function(n) {
+  if (n < 0) {
+    return isEven(Math.abs(n));
+  }
+  if (n > 1) {
+    return isEven(n - 2);
+  }
+  if (n === 1) {
+    return false;
+  }
+  else {
+    return true;
+  }
 };
 
 // 5. Sum all integers below a given integer.
 // sumBelow(10); // 45
 // sumBelow(7); // 21
 var sumBelow = function(n) {
+  if (n === 0) {
+    return 0;
+  }
+  else {
+    return (n - 1) + sumBelow(n - 1);
+  }
 };
 
 // 6. Get the integers within a range (x, y).
